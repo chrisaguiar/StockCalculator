@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Login</title>
+  <script src="app.js" async defer></script>
+  <link rel="stylesheet" type="text/css" href="../CSS/login-create.css">
+</head>
+
+<body>
+  <h1>Login</h1>
+  <div style="text-align: center; margin-top: 50px; display: flex; justify-content: center;">
+    <form method="POST" action="./main.html" onsubmit="return validateForm()"
+      style="display: inline-block; background-color: #2C2C2C; padding: 30px; border-radius: 10px;">
+      <form method="POST" action="./main.html" onsubmit="return validateForm()">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password">
+        <p id="error-message">Incorrect username or password</p>
+        <button type="submit">Login</button>
+        <button type="button" onclick="window.location.href='./create-account.html'">Create Account</button>
+      </form>
+  </div>
+</body>
+
+</html>

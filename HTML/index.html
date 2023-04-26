@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Manager</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="../JS/script.js" async defer></script>
+</head>
+
+<body onload="getNews()">
+
+    <h1>Stock Portfolio Manager</h1>
+
+    <div class="stock-price">
+        <input type="text" id="symbol" name="symbol" placeholder="Search a stock symbol"
+            oninput="this.value = this.value.toUpperCase()">
+        <i class="material-icons" id="search" onclick="getInfo()">search</i>
+    </div>
+
+    <div class="info">
+        <p id="openPrice"></p>
+        <p id="closePrice"></p>
+        <p id="Volume"></p>
+        <p id="High"></p>
+        <p id="Low"></p>
+        <p id="Error"></p>
+    </div>
+
+    <!-- <div class="article"> -->
+    <ul id="news-list"></ul>
+
+
+    <!-- <h2>Microsoft stock rises on strong earnings report</h2>
+        <p>Microsoft (MSFT) shares jumped Wednesday after the software leader beat Wall Street's targets for its fiscal third quarter thanks to a strong showing by its cloud computing businesses. The company also guided higher for the current period. MSFT stock rose over 6% on the news.
+
+            The Redmond, Wash.-based company late Tuesday said it earned $2.45 a share on sales of $52.9 billion for the quarter ended March 31. Analysts polled by FactSet had expected earnings of $2.24 a share on sales of $51 billion. On a year-over-year basis, Microsoft earnings rose 10% while sales advanced 7%.
+            
+            Microsoft Cloud sales surged 22% to $28.5 billion in the March quarter.</p>
+        <button><a href="https://www.investors.com/news/technology/msft-stock-microsoft-beats-march-quarter-goals/" target="_blank">Read More</a></button>
+    </div>
+    <div class="article">
+        <h2>Apple announces new product lineup at Spring Event</h2>
+        <p>Apple in January 2023 introduced new 14-inch and 16-inch MacBook Pro models that are equipped with updated M2 Pro and M2 Max chips. Apple also introduced new M2 and M2 Pro Mac mini machines and a new larger-sized $299 HomePod, with all of these announcements done via press release.</p>
+        <button><a href="https://www.macrumors.com/guide/apple-event/" target="_blank">Read More</a></button>
+    </div>
+    <div class="article">
+        <h2>Amazon announces plans to acquire MGM Studios</h2>
+        <p>Amazon's nearly $8.5 billion deal to purchase the film and television studio MGM is official. The two companies announced Wednesday that MGM is now a part of Prime Video and Amazon Studios — cementing the merger that was first announced last May.
+
+            This is the second-largest acquisition for Amazon after purchasing Whole Foods. The purchase of the movie and TV studio behind iconic films like the James Bond franchise, Rocky, The Silence of the Lambs and Legally Blonde is just the latest in big-name media and streaming-service mergers.</p>
+        <button><a href="https://www.npr.org/2022/03/17/1087268067/amazon-mgm-deal#:~:text=Amazon's%20nearly%20%248.5%20billion%20deal,was%20first%20announced%20last%20May." target="_blank">Read More</a></button> -->
+    <!-- </div> -->
+
+</body>
+
+</html>
