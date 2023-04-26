@@ -40,6 +40,9 @@ h1 {
     top: 0.2em;
     right: 0.1em;
 }
+.info {
+    margin-left: 20px;
+}
 .article {
     background-color: white;
     padding: 20px;
