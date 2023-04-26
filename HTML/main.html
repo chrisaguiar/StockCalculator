@@ -15,22 +15,36 @@
 <body onload="getNews()">
 
     <h1>Stock Portfolio Manager</h1>
-
     <div class="stock-price">
         <input type="text" id="symbol" name="symbol" placeholder="Search a stock symbol"
-            oninput="this.value = this.value.toUpperCase()">
+        oninput="this.value = this.value.toUpperCase()">
         <i class="material-icons" id="search" onclick="getInfo()">search</i>
     </div>
 
-    <div class="info">
-        <p id="openPrice"></p>
-        <p id="closePrice"></p>
-        <p id="Volume"></p>
-        <p id="High"></p>
-        <p id="Low"></p>
-        <p id="Error"></p>
+    <div class="stock-parent invisible" id="parent">
+        <div class="stock-info">
+            <p id="openPrice"></p>
+            <p id="closePrice"></p>
+            <p id="Volume"></p>
+            <p id="High"></p>
+            <p id="Low"></p>
+            <p id="Error"></p>
+        </div>
+    
+        <div class="stock-options">
+            <p id="stock"></p>
+            <p id="buy-sell">
+                <button class="button buy" style="vertical-align:middle" onclick="toggle(this)"><span>Buy </span></button>
+                <button class="button sell" style="vertical-align:middle" onclick="toggle(this)"><span>Sell </span></button>
+            </p>
+            <p id="quantity"></p>
+            <input type="number" class="quantity" placeholder="Enter how many you want to buy/sell" min="0" />
+            <p id="type"></p>
+            <p id="order-info"></p>
+            <p id="Error2"></p>
+    
+        </div>
     </div>
-
     <!-- <div class="article"> -->
     <ul id="news-list"></ul>
 
