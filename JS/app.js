@@ -97,9 +97,9 @@ app.get('/logout', (req, res) => {
   });
 });
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-});
+// app.get('/', (req, res) => {
+//   res.send('Hello World!');
+// });
 
 app.post('/validate', (req, res) => {
   const { username, password } = req.body;
