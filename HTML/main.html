@@ -34,16 +34,28 @@
         <div class="stock-options">
             <p id="stock"></p>
             <p id="buy-sell">
-                <button class="button buy" style="vertical-align:middle" onclick="toggle(this)"><span>Buy </span></button>
-                <button class="button sell" style="vertical-align:middle" onclick="toggle(this)"><span>Sell </span></button>
+                <button class="active-button button buy" style="vertical-align:middle" onclick="toggle(this)" value="1"><span>Buy </span></button>
+                <button class="button sell" style="vertical-align:middle" onclick="toggle(this)" value="0"><span>Sell </span></button>
             </p>
             <p id="quantity"></p>
-            <input type="number" class="quantity" placeholder="Enter how many you want to buy/sell" min="0" />
-            <p id="type"></p>
+                <input type="number" id="quan" class="quantity invisible" placeholder="Enter how many you want to buy/sell" min="0" />
+            <p id="type">
+                <button class="button2 choice" style="vertical-align:middle" onclick="enter()"><span id="choice">Buy</span></button>
+            </p>
             <p id="order-info"></p>
             <p id="Error2"></p>
     
         </div>
+    </div>
+<!-- Start of database portion -->
+
+    <div id="stock-data">
+
+
+
+
+
+
     </div>
     <!-- <div class="article"> -->
     <ul id="news-list"></ul>
