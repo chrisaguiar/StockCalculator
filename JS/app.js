@@ -1,3 +1,4 @@
+// creating relevant variables
 const express = require('express');
 const session = require('express-session');
 const bcrypt = require('bcrypt');
@@ -11,7 +12,7 @@ app.use(session({
 }));
 
 app.use(express.urlencoded({ extended: true }));
-
+// establishing connection to MySQL DB
 const connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
@@ -33,7 +34,7 @@ function validateForm() {
 }
 
 
-
+// Create-Account, insertion into db table
 app.get('../HTML/create-account.html', (req, res) => {
   const { username, password } = req.body;
 
@@ -61,9 +62,10 @@ app.get('../HTML/create-account.html', (req, res) => {
   });
 });
 
+// fetch from db and compare to login
 app.post('/login', (req, res) => {
   const { username, password } = req.body;
-  
+
   connection.query('SELECT * FROM users WHERE username = ?', [username], (err, results) => {
     if (err) {
       console.log(err);
@@ -71,13 +73,13 @@ app.post('/login', (req, res) => {
     } else if (results.length === 0) {
       res.send('Invalid username or password');
     } else {
-     
+
       bcrypt.compare(password, results[0].password, (err, result) => {
         if (err) {
           console.log(err);
           res.send('Error logging in');
         } else if (result) {
-          
+
           req.session.userId = results[0].id;
           res.redirect('../HTML/main.html');
         } else {
@@ -88,10 +90,5 @@ app.post('/login', (req, res) => {
   });
 });
 
-
-
-app.listen(3000, () => {
-  console.log('Server started on port 3000');
-});
 
 

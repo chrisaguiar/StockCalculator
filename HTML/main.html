@@ -17,7 +17,7 @@
     <h1>Stock Portfolio Manager</h1>
     <div class="stock-price">
         <input type="text" id="symbol" name="symbol" placeholder="Search a stock symbol"
-        oninput="this.value = this.value.toUpperCase()">
+            oninput="this.value = this.value.toUpperCase()">
         <i class="material-icons" id="search" onclick="getInfo()">search</i>
     </div>
 
@@ -30,31 +30,30 @@
             <p id="Low"></p>
             <p id="Error"></p>
         </div>
-    
+
         <div class="stock-options">
             <p id="stock"></p>
             <p id="buy-sell">
-                <button class="active-button button buy" style="vertical-align:middle" onclick="toggle(this)" value="1"><span>Buy </span></button>
-                <button class="button sell" style="vertical-align:middle" onclick="toggle(this)" value="0"><span>Sell </span></button>
+                <button class="active-button button buy" style="vertical-align:middle" onclick="toggle(this)"
+                    value="1"><span>Buy </span></button>
+                <button class="button sell" style="vertical-align:middle" onclick="toggle(this)" value="0"><span>Sell
+                    </span></button>
             </p>
             <p id="quantity"></p>
-                <input type="number" id="quan" class="quantity invisible" placeholder="Enter how many you want to buy/sell" min="0" />
+            <input type="number" id="quan" class="quantity invisible" placeholder="Enter how many you want to buy/sell"
+                min="0" />
             <p id="type">
-                <button class="button2 choice" style="vertical-align:middle" onclick="enter()"><span id="choice">Buy</span></button>
+                <button class="button2 choice" style="vertical-align:middle" onclick="enter()"><span
+                        id="choice">Buy</span></button>
             </p>
             <p id="order-info"></p>
             <p id="Error2"></p>
-    
+
         </div>
     </div>
-<!-- Start of database portion -->
+    <!-- Start of database portion -->
 
     <div id="stock-data">
-
-
-
-
-
 
     </div>
     <!-- <div class="article"> -->
