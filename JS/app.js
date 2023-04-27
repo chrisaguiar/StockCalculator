@@ -34,7 +34,7 @@ function validateForm() {
 
 
 
-app.get('./create-account.html', (req, res) => {
+app.get('../HTML/create-account.html', (req, res) => {
   const { username, password } = req.body;
 
   const errors = validateForm(username, password);
@@ -54,7 +54,7 @@ app.get('./create-account.html', (req, res) => {
           console.log(err);
           res.send('Error registering user');
         } else {
-          res.redirect('./login-form.html');
+          res.redirect('../HTML/login-form.html');
         }
       });
     }
@@ -79,7 +79,7 @@ app.post('/login', (req, res) => {
         } else if (result) {
           
           req.session.userId = results[0].id;
-          res.redirect('./main.html');
+          res.redirect('../HTML/main.html');
         } else {
           res.send('Invalid username or password');
         }
